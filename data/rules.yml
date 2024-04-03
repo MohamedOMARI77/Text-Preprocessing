@@ -1,0 +1,59 @@
+rules:
+# - rule: Say hello anytime the user says hello
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Affirm anytime the user affirms
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- rule: Deny anytime the user denies
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- rule: Ask time anytime the user asks for time
+  steps:
+  - intent: ask_time
+  - action: action_ask_time
+
+- rule: Ask weather anytime the user asks for weather
+  steps:
+  - intent: ask_weather
+  - action: action_ask_weather
+
+- rule: Ask date anytime the user asks for date
+  steps:
+  - intent: ask_date
+  - action: action_ask_date
+
+- rule: Ask help anytime the user asks for help
+  steps:
+  - intent: ask_help
+  - action: utter_ask_help
+
+- rule: Ask preference anytime the user asks for preference
+  steps:
+  - intent: ask_preference
+  - action: utter_ask_preference
+
+- rule: Bot challenge anytime the user challenges the bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+- rule: Say phone anytime the user asks for phone
+  steps:
+  - intent: repeat_phone
+  - action: action_say_phone
+- rule: Say name anytime the user asks for name
+  steps:
+  - intent: repeat_name
+  - action: action_say_name
+

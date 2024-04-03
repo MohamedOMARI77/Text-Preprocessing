@@ -1,0 +1,3 @@
+# Ignore les fichiers et dossiers générés par Rasa
+.rasa/
+models/

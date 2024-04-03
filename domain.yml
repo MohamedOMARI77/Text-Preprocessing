@@ -1,0 +1,71 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_time
+  - ask_weather
+  - ask_date
+  - ask_help
+  - ask_name
+  - ask_preference
+  - bot_challenge
+  - provide_name
+  - phone
+  - repeat_phone
+  - name
+  - repeat_name
+
+entities:
+  - number
+  - nom
+
+slots:
+  phone:
+    type: text
+    influence_conversation: true #to extract value from conversation
+    mappings:
+      - type: from_entity
+        entity: number
+  name:
+    type: text
+    influence_conversation: true #to extract value from conversation
+    mappings:
+      - type: from_entity
+        entity: nom
+
+responses:
+  utter_greet:
+    - text: "Bonjour! Comment puis-je vous aider aujourd'hui?"
+  utter_ask_phone:
+    - text: "Est ce que je peux avoir ton num de téléphone?"
+  utter_goodbye:
+    - text: "Au revoir! Passez une bonne journée."
+  utter_affirm:
+    - text: "D'accord."
+  utter_deny:
+    - text: "Je suis désolé, je ne peux pas faire ça."
+  utter_ask_time:
+    - text: "Il est actuellement {time}."
+  utter_ask_weather:
+    - text: "Le temps est actuellement {weather}."
+  utter_ask_date:
+    - text: "Nous sommes le {date}."
+  utter_ask_help:
+    - text: "Comment puis-je vous aider?"
+  utter_ask_name:
+    - text: "Quel est votre nom d'abord?"
+  utter_ask_preference:
+    - text: "Je préfére Game Of Thrones, et toi?"
+  utter_bot_challenge:
+    - text: "Je suis MedBot créé avec Rasa."
+  utter_provide_name:
+    - text: "Mon nom est MedBot."
+
+actions:
+  - action_ask_time
+  - action_ask_weather
+  - action_ask_date
+  - action_provide_name
+  - action_say_phone
+  - action_say_name

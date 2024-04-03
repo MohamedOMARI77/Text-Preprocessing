@@ -1,0 +1,89 @@
+stories:
+- story: greet and ask time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_time
+  - action: action_ask_time
+
+- story: goodbye after greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: affirm after asking for help
+  steps:
+  - intent: ask_help
+  - action: utter_ask_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: deny after asking for help
+  steps:
+  - intent: ask_help
+  - action: utter_ask_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask weather after greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - action: action_ask_weather
+
+- story: ask date after asking time
+  steps:
+  - intent: ask_time
+  - action: action_ask_time
+  - intent: ask_date
+  - action: action_ask_date
+
+- story: ask name after asking for help
+  steps:
+  - intent: ask_help
+  - action: utter_ask_help
+  - intent: ask_name
+  - action: utter_ask_name
+
+- story: ask preference after greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_preference
+  - action: utter_ask_preference
+
+- story: bot challenge after greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- story: provide name after asking name
+  steps:
+  - intent: ask_name
+  - action: utter_provide_name
+- story: provide phone after receiving phone
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: phone
+    entities:
+    - number: 12345678
+  - slot_was_set:
+    - phone: 123452345
+  - action: action_say_phone
+- story: provide name after receiving name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: name
+    entities:
+    - nom: Mohamed
+  - slot_was_set:
+    - name: Ali
+  - action: action_say_name
+

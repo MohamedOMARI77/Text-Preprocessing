@@ -1,0 +1,89 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Bonjour
+    - Salut
+    - Coucou
+    - Hello
+    - Hé
+- intent: goodbye
+  examples: |
+    - Au revoir
+    - A plus tard
+    - Bye
+    - Adieu
+    - A bientôt
+- intent: affirm
+  examples: |
+    - Oui
+    - D'accord
+    - Bien sûr
+    - Absolument
+    - Exactement
+- intent: deny
+  examples: |
+    - Non
+    - Pas du tout
+    - Je ne pense pas
+    - Absolument pas
+    - Certainement pas
+- intent: ask_time
+  examples: |
+    - Quelle heure est-il?
+    - Peux-tu me dire l'heure?
+    - Tu sais quelle heure il est?
+    - Il est quelle heure?
+- intent: ask_weather
+  examples: |
+    - Quel temps fait-il?
+    - Comment est la météo?
+    - Peux-tu me dire la météo?
+    - Il fait quel temps dehors?
+- intent: ask_date
+  examples: |
+    - Quelle est la date aujourd'hui?
+    - On est quel jour?
+    - Peux-tu me dire la date?
+- intent: ask_help
+  examples: |
+    - J'ai besoin d'aide
+    - Peux-tu m'aider?
+    - J'ai besoin de ton aide
+    - Aide-moi s'il te plaît
+- intent: ask_name
+  examples: |
+    - Quel est ton nom?
+    - Comment tu t'appelles?
+    - Tu t'appelles comment?
+- intent: ask_preference
+  examples: |
+    - Quelle est ta couleur préférée?
+    - Quel est ton film préféré?
+- intent: bot_challenge
+  examples: |
+    - Es-tu un robot?
+    - Es-tu un humain ou un robot?
+    - Es-tu une IA?
+- intent: provide_name
+  examples: |
+    - Mon nom est John
+    - Je m'appelle Sarah
+    - On m'appelle Bob
+- intent: phone
+  examples: |
+    - [123456789](number)
+    - voilà mon num de téléphone [123476530](number)
+    - mon num de téléphone est [123476530](number)
+- intent: repeat_phone
+  examples: |
+    - Quel est mon num de téléphone
+    - Dit moi mon num de téléphone
+    - répéter mon num de téléphone
+- intent: name
+  examples: |
+    - Bonjour! Je m'appelle [Mohamed](nom)
+- intent: repeat_name
+  examples: |
+    - Quel est mon nom?
+    - Répéter  mon nom?
